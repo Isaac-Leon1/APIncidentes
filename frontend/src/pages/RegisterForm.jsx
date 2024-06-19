@@ -45,7 +45,14 @@ const RegisterForm = () => {
       email: e.target.email.value,
       password: e.target.password.value
     }
-    signUp(data)
+    try {
+      signUp(data)
+      if(data){
+        navigate('/login')
+      }
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   useEffect(() => {

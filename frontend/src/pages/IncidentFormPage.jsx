@@ -6,17 +6,15 @@ const IncidentFormPage = () => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    const date = e.target.date.value.toLocaleDateString()
     const data = {
       type: e.target.type.value,
-      date: date,
+      date: e.target.date.value,
       location: e.target.location.value,
       description: e.target.description.value,
       status: e.target.status.value
     }
     const response = submitIncident(data)
     if (response){
-      console.log(response);
       e.target.type.value = ""
       e.target.date.value = ""
       e.target.location.value = ""

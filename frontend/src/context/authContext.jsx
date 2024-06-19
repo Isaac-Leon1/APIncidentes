@@ -1,6 +1,7 @@
 import { useState, useEffect, createContext, useContext } from "react";
 import { loginRequest, registerRequest, submitRequest } from "../api/auth";
 
+
 // Crear el contexto de autenticación
 export const AuthContext = createContext();
 
@@ -15,7 +16,7 @@ export const useAuth = () => {
 
 // Proveedor de autenticación
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState([]);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [errors, setErrors] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -32,20 +33,18 @@ export const AuthProvider = ({ children }) => {
     const signUp = async (user) => {
         try {
             const response = await registerRequest(user);
-            console.log(response);
-            setUser(response.data);
-            setIsAuthenticated(true);
+            alert("Te has registrado correctamente")
+            return response;
         } catch (error) {
-            console.log(error.response.data);
-            setErrors([error.response.data]);
+            console.log(error);
         }
     };
 
     const signIn = async (user) => {
         try {
             const response = await loginRequest(user);
-            console.log(response);
-            setUser(response.data);
+            console.log(response.data.finduser);
+            setUser(response.data.finduser);
             setIsAuthenticated(true);
             localStorage.setItem("token", response.data.token);
         } catch (error) {
@@ -77,11 +76,7 @@ export const AuthProvider = ({ children }) => {
             
         } catch (error) {
             console.log(error.response.data);
-            if (Array.isArray(error.response.data)) {
-                setErrors(error.response.data);
-            } else {
-                setErrors([error.response.data.msg]);
-            }
+            setErrors(error.response.data.msg);
         }
     }
 
