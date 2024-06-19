@@ -1,0 +1,139 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header-tools{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: #464646;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  .botonCuenta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  a{
+    color: #ccc;
+    text-decoration: none;
+  }
+  a:hover{
+    color: #fff;
+  }
+  .userIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 99px;
+  }
+}
+
+.seccion-cuadroBusqueda{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  button{
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: 0px None;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  input{
+    width: 80%;
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: 0px None;
+    border-bottom: 3px solid #ccc;
+  }
+}
+
+.lista-desplegable{
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: 0px None;
+  border-bottom: 3px solid #ccc;
+}
+
+.contenedor-formulario{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #464646;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.elemento-error{
+  background-color: #ff0000;
+  padding: 0.5rem;
+  color: #fff;
+  margin: 0.5rem;
+  border-radius: 5px;
+}
+
+.formulario{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto auto;
+  
+  input{
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: 0px None;
+    border-bottom: 3px solid #ccc;
+  }
+  button{
+    grid-column: 1 / span 2;
+    padding: 0.7rem;
+
+    width: 100%;
+
+    border-radius: 5px;
+    border: 0px None;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+}
+
+.contenedor-incidentes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.incident-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #ccc;
+  background-color: #464646;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(79, 79, 79, 0.3);
+}
+
+.submit-incident{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.submit-incident input{
+  padding: .5rem;
+}
