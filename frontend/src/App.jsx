@@ -7,6 +7,7 @@ import LoginForm from './pages/LoginForm'
 import RegisterForm from './pages/RegisterForm'
 import IncidentFormPage from './pages/IncidentFormPage'
 import ProtectedRoute from './ProtectedRoutes'
+import ProfilePage from './pages/ProfilePage'
 function App() {
   return (
     <AuthProvider>
@@ -22,6 +23,7 @@ function App() {
             <Route element={<ProtectedRoute/>}>
               <Route path='/add-incident' element={<IncidentFormPage/>}/>
               <Route path='/incident/:id' element={<IncidentFormPage/>}/>
+              <Route path='/profile' element={<ProfilePage/>}/>
             </Route>
           </Routes>
         </main>

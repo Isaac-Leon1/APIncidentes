@@ -13,12 +13,15 @@ const LoginForm = () => {
       email: e.target.email.value,
       password: e.target.password.value
     }
-    signIn(data)
+    const signUp = signIn(data)
+    if (signUp){
+      navigate('/login')
+    }
   }
 
   useEffect(() => {
     if(isAuthenticated){
-      navigate('/add-incident') // Si la autenticacion es exitosa, redirecciona a la pagina tasks
+      navigate('/profile') // Si la autenticacion es exitosa, redirecciona a la pagina tasks
     }
   }, [isAuthenticated])
   return (
