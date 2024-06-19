@@ -24,16 +24,16 @@ const IncidentFormPage = () => {
   }
 
   return (
-    <div>
-        <h1>IncidentFormPage</h1>
+    <div className='contenedor-formulario'>
+        <h1>Detalles incidente</h1>
         {
-        submitError.map((error, i) =>(
-          <div className='elemento-error' key={i}>
-            {error}
-          </div>
-        ))
+          submitError.map((error, i) =>(
+            <div className='elemento-error' key={i}>
+              {error}
+            </div>
+          ))
         }
-        <form className='submit-incident' onSubmit={onSubmit}>
+        <form className='formulario' onSubmit={onSubmit}>
             <label htmlFor="type">Tipo de Delito</label>
             <input type="text" id="type" name="type" required/>
 

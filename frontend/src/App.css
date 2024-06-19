@@ -38,6 +38,61 @@
   }
 }
 
+.body-perfil{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-usuario{
+  display: grid;
+  grid-template-columns: 0.5fr auto;
+  border: 1px solid #ccc;
+  background-color: #464646;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  h2{
+    grid-column: 1 / span 2;
+  }
+  img{
+    align-self: center;
+    justify-self: center;
+    width: 50%;
+    border-radius: 5px 5px 0px 0px;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7));
+  }
+  .info-usuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    h2{
+      margin: 0;
+    }
+    p{
+      margin: 0;
+    }
+  
+  }
+}
+
+.acciones-usuario{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px;
+  button{
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: 0px None;
+    background-color: #767474;
+    cursor: pointer;
+  }
+}
+
 .seccion-cuadroBusqueda{
   display: flex;
   justify-content: space-evenly;
@@ -75,6 +130,7 @@
   background-color: #464646;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 4px;
 }
 
 .elemento-error{
@@ -88,6 +144,7 @@
 .formulario{
   display: grid;
   gap: 1rem;
+  width: 70%;
   grid-template-columns: auto auto;
   
   input{
@@ -105,7 +162,7 @@
 
     border-radius: 5px;
     border: 0px None;
-    background-color: #ccc;
+    background-color: #767474;
     cursor: pointer;
   }
 }

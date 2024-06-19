@@ -20,6 +20,7 @@ export const AuthProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [errors, setErrors] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [query, setQuery] = useState('');
     let setTimeOuts = [];
 
     useEffect(() => {
@@ -118,6 +119,8 @@ export const AuthProvider = ({ children }) => {
         isAuthenticated, 
         errors, 
         loading, 
+        query,
+        setQuery,
         signUp, 
         signIn, 
         logOut,

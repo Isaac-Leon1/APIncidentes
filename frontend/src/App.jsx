@@ -8,6 +8,7 @@ import RegisterForm from './pages/RegisterForm'
 import IncidentFormPage from './pages/IncidentFormPage'
 import ProtectedRoute from './ProtectedRoutes'
 import ProfilePage from './pages/ProfilePage'
+import SearchIncident from './pages/SearchIncident'
 function App() {
   return (
     <AuthProvider>
@@ -19,6 +20,7 @@ function App() {
             <Route path='/' element={<IncidentsPage/>}/>
             <Route path='/login' element={<LoginForm/>}/>
             <Route path='/register' element={<RegisterForm/>}/>
+            <Route path='/search' element={<SearchIncident/>}/>
             {/*Rutas privadas*/}
             <Route element={<ProtectedRoute/>}>
               <Route path='/add-incident' element={<IncidentFormPage/>}/>

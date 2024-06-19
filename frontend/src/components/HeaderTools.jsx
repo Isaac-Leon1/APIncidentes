@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom"
+import { useAuth } from "../context/authContext"
 
 const HeaderTools = () => {
+    const {query, setQuery} = useAuth();
+
+    const handleSearch = (e) => {
+        setQuery(e.target.value);
+    }
+
   return (
     <nav className="header-tools">
         <Link to="/">
@@ -8,7 +15,9 @@ const HeaderTools = () => {
         </Link>
         <div className="seccion-cuadroBusqueda">
             <input type="text" placeholder="Incidente..."/>
-            <button><i className="fas fa-magnifying-glass"></i></button>
+            <Link to="/search">
+                <button onClick={handleSearch}><i className="fas fa-magnifying-glass"></i></button>
+            </Link>
         </div>
         <div className="botonCuenta">
             <Link to="/login">
